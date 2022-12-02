@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/views'));
 app.get('/', (req, res) => {
 
 // Change the 'color' variable to a different color!
-  var color = 'SteelBlue';
+  var color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
 
   res.render('index', {color: color});
 });
